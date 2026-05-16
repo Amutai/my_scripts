@@ -2,6 +2,10 @@
 
 Encrypt and decrypt files or directories using [age](https://github.com/FiloSottile/age) (AES-256, passphrase-based).
 
+## Why I Built This
+
+I needed a simple, portable way to encrypt sensitive files (SSH keys, credentials, configs) before storing them on cloud drives or USB sticks. Existing tools were either too complex (GPG) or required key management I didn't want. `age` provides modern encryption with just a passphrase — this script wraps it with directory support, interactive prompts, and auto-installation so I can use it on any fresh Linux machine in seconds.
+
 ## Quick Start
 
 ```bash
