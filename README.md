@@ -14,4 +14,4 @@ Each script lives in its own directory with its own README. Refer to the individ
 
 ## License
 
-MIT
+[MIT](LICENSE)
