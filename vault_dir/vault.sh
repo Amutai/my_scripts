@@ -4,6 +4,7 @@
 
 set -euo pipefail
 
+VAULT_VERSION=$(cat "$(dirname "$0")/VERSION")
 AGE_VERSION="1.2.0"
 
 install_age() {
@@ -115,7 +116,8 @@ usage() {
 check_age
 
 case "${1:-}" in
-  lock)   do_lock "${2:-}" ;;
-  unlock) do_unlock "${2:-}" ;;
-  *)      usage ;;
+  lock)      do_lock "${2:-}" ;;
+  unlock)    do_unlock "${2:-}" ;;
+  --version) echo "vault $VAULT_VERSION" ;;
+  *)         usage ;;
 esac
